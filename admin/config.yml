@@ -3,8 +3,8 @@ backend:
     name: git-gateway
     branch: main
 
-site_url: http://127.0.0.1:5500
-display_url: http://127.0.0.1:5500/index.html
+site_url: https://fluffy-arithmetic-3389d4.netlify.app/
+display_url: https://fluffy-arithmetic-3389d4.netlify.app/
 
 media_folder: media
 
