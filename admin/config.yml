@@ -1,6 +1,6 @@
 local_backend: true
 backend:
-    name: Luxius44/one-click-hugo-cms
+    name: git-gateway
     branch: main
 
 site_url: https://fluffy-arithmetic-3389d4.netlify.app/
