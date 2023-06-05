@@ -18,5 +18,14 @@ collections:
             label: Home
             file: data.json
             fields:
+                - { name: navTitle1, label: NavTitle1, widjet: string}
+                - { name: navTitle2, label: NavTitle2, widjet: string}
+                - { name: navTitle2, label: NavTitle3, widjet: string}
                 - { name: title, label: Title, widget: string }
-                - { name: description, label: Description, widget: string }
+                - { name: image1, label: Image1, widget: image }
+                - { name: image2, label: Image2, widget: image }
+                - { name: image3, label: Image3, widget: image }
+                - { name: image4, label: Image4, widget: image }
+                - { name : text, label: Text, widget: markdown }
+                - { name : footer, label : Footer, widget : string}
+
