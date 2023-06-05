@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+	</head>
+	<body>
+		<!-- App -->
+		<script type="module">
+			const data = await fetch("data.json").then(res => res.json());
+
+			const html = `
+                <h1>${data.title}</h1>
+                <p>${data.description}</p>
+                <a href="admin/">Page admin</a>
+            `;
+
+			document.body.insertAdjacentHTML("afterbegin", html);
+		</script>
+
+		<!-- Decap -->
+		<script>
+			if (window.netlifyIdentity) {
+				window.netlifyIdentity.on("init", user => {
+					if (!user) {
+						window.netlifyIdentity.on("login", () => {
+							document.location.href = "/admin/";
+						});
+					}
+				});
+			}
+		</script>
+	</body>
+</html>
