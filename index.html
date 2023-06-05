@@ -9,6 +9,7 @@
 	</head>
 	<body>
 		<!-- App -->
+		<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 		<script type="module">
 			const data = await fetch("data.json").then(res => res.json());
 
@@ -26,7 +27,7 @@
 					<img src=${data.image3}>
 					<img src=${data.image4}>
 				</div>
-				<p>${data.text}</p>
+				<div>${marked.parse(data.text)}</div>
 			</div>
 			<footer>
 				<p>${data.footer}</p>
